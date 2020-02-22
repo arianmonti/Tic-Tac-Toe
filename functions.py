@@ -23,7 +23,6 @@ def check_tie(counter, table, main, a): # check if game tied or not
     if counter == 9: tied = True
     if (tied == True): 
         Print_table(table)
-        #print(check_x_win(table, counter, main, a))
         print("Tied")
         ask = input("Do you want to play again?(Y/n) ")
         ask = ask.upper()
