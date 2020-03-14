@@ -1,16 +1,18 @@
-'''Hi! This program is a simple 2_player Tic-Tac-Toe 
+'''Hi! This program is a simple 2_player Tic-Tac-Toe
    without graphical environment
 '''
 
-table, a, counter = [], [], 0
-win = ((0, 1, 2),(0, 3, 6),(2, 4, 6),
-       (3, 4, 5),(1, 4, 7),(2, 5, 8),          
-       (6, 7, 8),(0, 4, 8))
-
 import functions as f
+table, a, counter = [], [], 0
+win = ((0, 1, 2), (0, 3, 6), (2, 4, 6),
+       (3, 4, 5), (1, 4, 7), (2, 5, 8),
+       (6, 7, 8), (0, 4, 8))
 
-for i in range(1, 10): table.append(i) # Add elements to table
+
+for i in range(1, 10):
+    table.append(i)  # Add elements to table
 f.Print_logo()
+
 
 def main(counter):
     try:
@@ -20,18 +22,27 @@ def main(counter):
             table[player_X] = "X"
             a.append(player_X)
             counter += 1
-            if f.check_tk(a) == True : break
-            if f.check_x_win(table, counter, main, a, win) == True : break
-            if f.check_tie(counter, table, main, a) == True : break
+            if f.check_tk(a):
+                break
+            if f.check_x_win(table, counter, main, a, win):
+                break
+            if f.check_tie(counter, table, main, a):
+                break
             f.Print_table(table)
             player_O = (int(input("Player O : ")) - 1)
             table[player_O] = "O"
             a.append(player_O)
             counter += 1
-            if f.check_tk(a) == True : break
-            if f.check_o_win(table, counter, main, a, win) == True : break
-            if f.check_tie(counter, table, main, a) == True : break
-        
-    except: print("Error")
+            if f.check_tk(a):
+                break
+            if f.check_o_win(table, counter, main, a, win):
+                break
+            if f.check_tie(counter, table, main, a):
+                break
+
+    except BaseException:
+        print("Error")
+
+
 main(counter)
 quit = input()
