@@ -13,7 +13,7 @@ def reset_table(table, counter, a):
     a.clear()
     counter = 0
     for i in range(1, 10):
-        table.append(i)  # add nine elements to table
+        table.append(i)  
 
 
 def Print_table(table):  # print tic-tac-toe table
