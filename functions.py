@@ -22,6 +22,19 @@ def Print_table(table):  # print tic-tac-toe table
     print(table[6], "|", table[7], "|", table[8])
 
 
+def check_inp(inp): # User Input validation
+    c = False
+    try:
+        inp = int(inp)
+        if(inp > 9 or inp < 1):
+            c = True
+            print("Error: Number is should be between 1 and ")
+    except:
+        c = True
+        print("Error: Only Numbers")
+    return c
+
+
 def check_tie(counter, table, main, a):  # check if game tied or not
     tied = False
     if counter == 9:
@@ -43,7 +56,7 @@ def check_tk(a):  # check if the number is'nt used before
         if (a.count(i) > 1):
             b = True
     if b:
-        print("Error: The Place is full")
+        print("Error: The Place is already full")
     return b
 
 

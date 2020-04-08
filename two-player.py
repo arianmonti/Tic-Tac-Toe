@@ -24,7 +24,10 @@ def main(counter):
         while True:
             os.system('clear')
             func.Print_table(table)
-            player_X = (int(input("Player X : ")) - 1)
+            player_X = (input("Player X : "))
+            if func.check_inp(player_X):
+                break
+            player_X = int(player_X) - 1
             table[player_X] = "X"
             a.append(player_X)
             counter += 1
@@ -36,7 +39,10 @@ def main(counter):
                 break
             os.system('clear')
             func.Print_table(table)
-            player_O = (int(input("Player O : ")) - 1)
+            player_O = (input("Player O : "))
+            if func.check_inp(player_O):
+                break
+            player_O = int(player_O) - 1
             table[player_O] = "O"
             a.append(player_O)
             counter += 1
@@ -50,6 +56,4 @@ def main(counter):
     except BaseException:
         print("Unexpected Error :)")
 
-
 main(counter)
-quit = input()
