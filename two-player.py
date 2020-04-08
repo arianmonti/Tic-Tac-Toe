@@ -48,7 +48,7 @@ def main(counter):
                 break
 
     except BaseException:
-        print("Error")
+        print("Unexpected Error :)")
 
 
 main(counter)

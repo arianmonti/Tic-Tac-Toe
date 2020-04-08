@@ -37,13 +37,13 @@ def check_tie(counter, table, main, a):  # check if game tied or not
     return tied
 
 
-def check_tk(a):  # check if player o enter same number or not
+def check_tk(a):  # check if the number is'nt used before
     b = False
     for i in range(0, 9):
         if (a.count(i) > 1):
             b = True
     if b:
-        print("Error")
+        print("Error: The Place is full")
     return b
 
 
