@@ -1,4 +1,4 @@
 # Tic-Tac-Toe
-## A simple and fun python game
-_OS Support: Linux, Mac OS_
-__This game will support Windows__ 
+## Play Tic Tac Toe on your teminal🎲😍
+![Image of Yaktocat](https://github.com/alirezainjast/tic-tac-toe/blob/master/screenShot.png)
+OS Support: Linux, Mac OS
