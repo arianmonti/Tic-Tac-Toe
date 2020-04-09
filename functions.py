@@ -26,22 +26,25 @@ def Print_table(table):  # print tic-tac-toe table
 
 
 def add_color(index): # add color based on charecter
-    if(index == "O"): return colored(index, "blue")
-    if(index == "X"): return colored(index, "red")
-    else: return index
+    if(index == "O"):
+        return colored(index, "blue")
+    if(index == "X"):
+        return colored(index, "red")
+    else:
+        return index
 
 
 def check_inp(inp): # user input validation
-    c = False
+    invalid = False
     try:
         inp = int(inp)
         if(inp > 9 or inp < 1):
-            c = True
+            invalid = True
             print("Error: Number is should be between 1 and ")
     except:
-        c = True
+        invalid = True
         print("Error: Only Numbers")
-    return c
+    return invalid
 
 
 def check_tie(counter, table, main, a):  # check if game tied or not
@@ -59,7 +62,7 @@ def check_tie(counter, table, main, a):  # check if game tied or not
     return tied
 
 
-def check_tk(a):  # check if the number is'nt used before
+def check_tk(a):  # check if the number isn't used before
     b = False
     for i in range(0, 9):
         if (a.count(i) > 1):
