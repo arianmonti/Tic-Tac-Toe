@@ -43,7 +43,7 @@ def main(counter):
                 break
             os.system('clear')
             func.Print_table(table)
-            player_O = (input("Player " + colored("O", "blue") + " : "))
+            player_O = (input("Player " + colored("O", "green") + " : "))
             if func.check_inp(player_O):
                 break
             player_O = int(player_O) - 1

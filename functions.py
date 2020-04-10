@@ -27,7 +27,7 @@ def Print_table(table):  # print tic-tac-toe table
 
 def add_color(index): # add color based on charecter
     if(index == "O"):
-        return colored(index, "blue")
+        return colored(index, "green")
     if(index == "X"):
         return colored(index, "red")
     else:
