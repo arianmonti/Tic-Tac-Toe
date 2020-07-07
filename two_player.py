@@ -7,9 +7,11 @@ Author: Arian Montazeri
 """
 
 import os
-import functions as func
-from termcolor import colored
+import sys
 import time
+from termcolor import colored
+import functions as func
+
 table, a, counter = [], [], 0
 win = ((0, 1, 2), (0, 3, 6), (2, 4, 6),
        (3, 4, 5), (1, 4, 7), (2, 5, 8),
@@ -24,6 +26,7 @@ func.Print_logo()
 time.sleep(1.5)
 
 def main(counter):
+    ''' Main function '''
     try:
         while True:
             os.system('clear')
@@ -58,6 +61,6 @@ def main(counter):
                 break
 
     except BaseException:
-        exit("Unexpected Error :)")
+        sys.exit("Unexpected Error :)")
 
 main(counter)
