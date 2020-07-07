@@ -9,4 +9,4 @@
 1. if you are using `MICROSOFT WINDOWS` and you want to play:
 * replace `os.system('clear')` with `os.system('cls')` in `two-player.py`
 * use `POWERSHELL`
-> OS Support: Linux, Mac OS
+>  OS Support: Linux, Mac OS
