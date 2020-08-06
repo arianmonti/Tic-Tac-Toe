@@ -6,7 +6,7 @@ Updated: 2020
 Author: Arian Montazeri
 """
 
-import os
+from os import system, name
 import sys
 import time
 from termcolor import colored
@@ -29,7 +29,7 @@ def main(counter):
     ''' Main function '''
     try:
         while True:
-            os.system('clear')
+            system('cls') if name == "nt" else system('clear')
             func.Print_table(table)
             player_X = (input("Player " + colored("X", "red") + " : "))
             if func.check_inp(player_X):
@@ -44,7 +44,7 @@ def main(counter):
                 break
             if func.check_tie(counter, table, main, a):
                 break
-            os.system('clear')
+            system('cls') if name == "nt" else system('clear')
             func.Print_table(table)
             player_O = (input("Player " + colored("O", "green") + " : "))
             if func.check_inp(player_O):
