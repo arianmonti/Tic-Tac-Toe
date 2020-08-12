@@ -40,10 +40,10 @@ def check_inp(inp): # user input validation
         inp = int(inp)
         if(inp > 9 or inp < 1):
             invalid = True
-            print("Error: Number is should be between 1 and ")
+            print(colored("Error: Number is should be between 1 and ", "red")
     except:
         invalid = True
-        print("Error: Only Numbers")
+        print(colored("Error: Only Numbers", "red"))
     return invalid
 
 
@@ -68,7 +68,7 @@ def check_tk(a):  # check if the number isn't used before
         if (a.count(i) > 1):
             b = True
     if b:
-        print("Error: The Place is already full")
+        print(colored("Error: The Place is already full", "red"))
     return b
 
 
