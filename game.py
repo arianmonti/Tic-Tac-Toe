@@ -20,10 +20,8 @@ win = ((0, 1, 2), (0, 3, 6), (2, 4, 6),
 
 for i in range(1, 10):
     table.append(i)  # Add elements to table
-func.Print_logo()
 
 # showing logo for 1500ms
-time.sleep(1.5)
 
 def main(counter):
     ''' Main function '''
@@ -63,4 +61,8 @@ def main(counter):
     except BaseException:
         sys.exit("Unexpected Error :)")
 
-main(counter)
+if __name__ == "__main__":
+    func.Print_logo()
+    time.sleep(1.5)
+    main(counter)
+

@@ -40,7 +40,7 @@ def check_inp(inp): # user input validation
         inp = int(inp)
         if(inp > 9 or inp < 1):
             invalid = True
-            print(colored("Error: Number is should be between 1 and ", "red")
+            print(colored("Error: Number is should be between 1 and ", "red"))
     except:
         invalid = True
         print(colored("Error: Only Numbers", "red"))
