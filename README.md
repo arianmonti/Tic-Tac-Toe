@@ -3,6 +3,7 @@
 ![Image of Yaktocat](https://github.com/alirezainjast/tic-tac-toe/blob/master/screenShot.png)
 ### How to run
 Install [Python](https://www.python.org). If you are using GNU/Linux You can install Python from your package manager.
+If you are using other OSs find out how to install Python. https://lmgtfy.com/?q=how+to+install+python+on+%5BOS%5D&s=d
 ``` bash
 sudo apt install python      ## Ubuntu, Debian
 sudo dnf install python      ## Fedora
