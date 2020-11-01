@@ -3,7 +3,7 @@ two-player, sample, fun
 
 Created: 2019
 Updated: 2020
-Author: Arian Montazeri
+Author: arianmonti
 """
 
 from os import system, name
@@ -65,4 +65,3 @@ if __name__ == "__main__":
     func.Print_logo()
     time.sleep(1.5)
     main(counter)
-
