@@ -13,9 +13,16 @@ from termcolor import colored
 import functions as func
 
 table, a, counter = [], [], 0
-win = ((0, 1, 2), (0, 3, 6), (2, 4, 6),
-       (3, 4, 5), (1, 4, 7), (2, 5, 8),
-       (6, 7, 8), (0, 4, 8))
+win = (
+    (0, 1, 2),
+    (0, 3, 6),
+    (2, 4, 6),
+    (3, 4, 5),
+    (1, 4, 7),
+    (2, 5, 8),
+    (6, 7, 8),
+    (0, 4, 8),
+)
 
 
 for i in range(1, 10):
@@ -23,13 +30,14 @@ for i in range(1, 10):
 
 # showing logo for 1500ms
 
+
 def main(counter):
     ''' Main function '''
     try:
         while True:
             system('cls') if name == "nt" else system('clear')
             func.Print_table(table)
-            player_X = (input("Player " + colored("X", "red") + " : "))
+            player_X = input("Player " + colored("X", "red") + " : ")
             if func.check_inp(player_X):
                 break
             player_X = int(player_X) - 1
@@ -44,7 +52,7 @@ def main(counter):
                 break
             system('cls') if name == "nt" else system('clear')
             func.Print_table(table)
-            player_O = (input("Player " + colored("O", "green") + " : "))
+            player_O = input("Player " + colored("O", "green") + " : ")
             if func.check_inp(player_O):
                 break
             player_O = int(player_O) - 1
@@ -60,6 +68,7 @@ def main(counter):
 
     except BaseException:
         sys.exit("Unexpected Error :)")
+
 
 if __name__ == "__main__":
     func.Print_logo()
